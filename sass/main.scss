@@ -1,18 +1,11 @@
-:root {
-    --primary-white-color: #ffffff;
-    --title-color: #212121;
-    --text-primary-color: #757575;
-    --link-footer-color: rgba(255, 255, 255, 0.6);
-    --background-secondary-color: #f5f4fa;
-    --background-footer-color: #2f303a;
-    --accent-color: #2196f3;
-    --soc-link-primary-color: #afb1b8;
-  }
+
+@import './utils/variables';
+
   
   body {
     font-family: "Roboto", sans-serif;
-    color: var(--text-primary-color);
-    background-color: var(--primary-white-color);
+    color: $textPrimaryColor;
+    background-color: $primaryWhiteColor;
     letter-spacing: 0.03em;
     font-size: 14px;
   }
@@ -93,7 +86,7 @@
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   /* BUTTON */
@@ -122,7 +115,7 @@
   } */
   .button {
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: $primaryBorderRadius;
   
     font-family: inherit;
     font-size: 16px;
@@ -133,8 +126,8 @@
     align-items: center;
     justify-content: center;
     padding: 10px 32px; 
-    border-radius: 4px;
-    border: 1px solid var(--accent-color);
+    border-radius: $primaryBorderRadius;
+    border: 1px solid $accentColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   
     font-family: inherit;
@@ -143,8 +136,8 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
   
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
     
     cursor: pointer;
   }
@@ -158,17 +151,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: $primaryBorderRadius;
     padding: 6px 22px;
     
-    border: 1px solid var(--background-secondary-color);
+    border: 1px solid $backgroundSecondaryColor;
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.62;
     text-align: center;
-    color: var(--title-color);
-    background-color: var(--background-secondary-color);
+    color: $titleColor;
+    background-color: $backgroundSecondaryColor;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -176,15 +169,15 @@
   
   .button-secondary:hover,
   .button-secondary:focus {
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
   
   .button.primary:hover,
   .button.primary:focus {
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   /* BUTTON END */
   
@@ -206,7 +199,7 @@
   
   .header .link:hover,
   .header .link:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
   
   .site-nav {
@@ -234,11 +227,11 @@
     padding-top: 32px;
     padding-bottom: 32px;
   
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   .site-nav__link--current {
-    color: var(--accent-color);
+    color: $accentColor;
   }
   
   .site-nav__link--current::after {
@@ -250,7 +243,7 @@
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background-color: var(--accent-color);
+    background-color: $accentColor;
     margin-top: 10px;
   }
   
@@ -286,16 +279,16 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
-    color: var(--title-color);
+    color: $titleColor;
     text-decoration: none;
   }
   
   .logo--blue {
-    color: var(--accent-color);
+    color: $accentColor;
   }
   
   .logo--white {
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   .header.bottom-line {
     border-bottom: 1px solid #ececec;
@@ -309,7 +302,7 @@
     padding-bottom: 200px;
     text-align: center;
   
-    background-color: var(--background-footer-color);
+    background-color: $backgroundFooterColor;
   }
   
   .overlay {
@@ -335,7 +328,7 @@
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   /* HERO END */
   
@@ -356,11 +349,11 @@
     margin-bottom: 30px;
     width: 100%;
     height: 120px;
-    background-color: var(--background-secondary-color);
+    background-color: $backgroundSecondaryColor;
   }
   
   .feature__img {
-    fill: var(--title-color);
+    fill: $titleColor;
   }
   
   .feature__item:not(:last-child) {
@@ -375,7 +368,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   .feature__text {
@@ -419,13 +412,13 @@
     text-align: center;
     text-transform: uppercase;
   
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   /* DIRECTIONS END*/
   
   /* TEAM */
   .time {
-    background-color: var(--background-secondary-color);
+    background-color: $backgroundSecondaryColor;
   }
   
   .time__list {
@@ -450,7 +443,7 @@
     padding-left: 32px;
     padding-right: 32px;
   
-    background-color: var(--primary-white-color);
+    background-color: $primaryWhiteColor;
   }
   
   .time__title {
@@ -459,7 +452,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   .time__text {
@@ -483,9 +476,9 @@
     justify-content: center;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: $fullRoundBorderRadius;
   
-    color: var(--soc-link-primary-color);
+    color: $socLinkPrimaryColor;
   
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -493,8 +486,8 @@
   
   .social-networks__btn:hover,
   .social-networks__btn:focus {
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
   }
   
   .social-networks__img {
@@ -511,11 +504,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--soc-link-primary-color);
-    border-radius: 4px;
+    border: 1px solid $socLinkPrimaryColor;
+    border-radius: $primaryBorderRadius;
     width: 170px;
     height: 90px;
-    color: var(--soc-link-primary-color);
+    color: $socLinkPrimaryColor;
   
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -523,8 +516,8 @@
   
   .clients__btn:hover,
   .clients__btn:focus {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    border: 1px solid $accentColor;
+    color: $accentColor;
   }
   
   .clients__item:not(:last-child) {
@@ -606,7 +599,7 @@
     font-size: 18px;
     line-height: 1.56;
   
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   
   .card-work__info {
@@ -618,7 +611,7 @@
     border-right: 1px solid#eeeeee;
     border-bottom: 1px solid#eeeeee;
   
-    background-color: var(--primary-white-color);
+    background-color: $primaryWhiteColor;
   }
   
   .card-work__title {
@@ -628,14 +621,14 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   .card-work__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
-    color: var(--text-primary-color);
+    color: $textPrimaryColor;
   }
   /* PORTFOLIO END*/
   
@@ -644,7 +637,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
   
-    background-color: var(--background-footer-color);
+    background-color: $backgroundFooterColor;
   }
   
   .footer__container {
@@ -668,14 +661,14 @@
     line-height: 1.7;
     margin-bottom: 9px;
   
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   
   .address__tel {
     font-weight: 400;
     line-height: 1.7;
   
-    color: var(--link-footer-color);
+    color: $linkFooterColor;
   }
   
   .address__item:not(:last-child) {
@@ -684,7 +677,7 @@
   
   .address__tel:hover,
   .address__tel:focus {
-    color: var(--accent-color);
+    color: $accentColor;
   }
   
   .footer-join {
@@ -697,18 +690,18 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.19;
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
     text-transform: uppercase;
   }
   
   .footer .social-link-btn {
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   
   .footer .social-link-btn:hover,
   .footer .social-link-btn:focus {
-    background-color: var(--accent-color);
+    background-color: $accentColor;
   }
   
   .footer .social-link-img {
@@ -728,7 +721,7 @@
     line-height: 1.14;
     text-transform: uppercase;
   
-    color: var(--primary-white-color);
+    color: $primaryWhiteColor;
   }
   
   .form-footer__wrapper {
@@ -760,9 +753,9 @@
     line-height: 1.25;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
+    border-radius: $primaryBorderRadius;
   
-    background-color: var(--background-footer-color);
+    background-color: $backgroundFooterColor;
     color: rgba(255, 255, 255, 0.6);
   }
   
@@ -801,9 +794,9 @@
     width: 528px;
     height: 581px;
     padding: 40px;
-    border-radius: 4px;
+    border-radius: $primaryBorderRadius;
   
-    background-color: var(--primary-white-color);
+    background-color: $primaryWhiteColor;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
   
@@ -822,7 +815,7 @@
   
     width: 30px;
     height: 30px;
-    border-radius: 50%;
+    border-radius: $fullRoundBorderRadius;
   
     cursor: pointer;
     background-color: transparent;
@@ -830,13 +823,13 @@
   }
   
   .form-btn__img {
-    fill: var(--title-color);
+    fill: $titleColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .form-btn:hover .form-btn__img,
   .form-btn:focus .form-btn__img {
-    fill: var(--accent-color);
+    fill: $accentColor;
   }
   
   .form__appeal {
@@ -847,7 +840,7 @@
     font-size: 20px;
     line-height: 1.15;
   
-    color: var(--title-color);
+    color: $titleColor;
   }
   
   .form-field {
@@ -870,14 +863,14 @@
     height: 40px;
     padding: 12px 42px;
   
-    border-radius: 4px;
+    border-radius: $primaryBorderRadius;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
   }
   .form__input:hover,
   .form__input:focus {
-    border-color: var(--accent-color);
+    border-color: $accentColor;
   }
   
   .form__input-area {
@@ -890,13 +883,13 @@
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
-    fill: var(--title-color);
+    fill: $titleColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .form__input:hover + .form__img,
   .form__input:focus + .form__img {
-    fill: var(--accent-color);
+    fill: $accentColor;
   }
   
   .form__cover {
@@ -907,7 +900,7 @@
     right: 5px;
     width: 25px;
     height: 25px;
-    background-color: var(--primary-white-color);
+    background-color: $primaryWhiteColor;
     pointer-events: none;
   }
   
@@ -957,16 +950,16 @@
   }
   
   .form-checkbox__label:hover::before {
-    box-shadow: 0 0 0 1px var(--accent-color);
+    box-shadow: 0 0 0 1px $accentColor;
   }
   
   .form-checkbox__input:focus + .form-checkbox__label::before {
-    box-shadow: 0 0 0 1px var(--accent-color);
+    box-shadow: 0 0 0 1px $accentColor;
   }
   
   .form-checkbox__input:checked + .form-checkbox__label::before {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
+    background-color: $accentColor;
+    border-color: $accentColor;
     background-image: url("../images/svg-otpimize/icon-check.svg");
     background-size: contain;
     background-origin: border-box;
@@ -989,7 +982,7 @@
   }
   
   .form-checkbox__link {
-    color: var(--accent-color);
+    color: $accentColor;
   }
   
   .hero-field textarea::placeholder {
