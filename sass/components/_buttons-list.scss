@@ -1,0 +1,11 @@
+
+.buttons-list {
+    @extend %list;
+    @extend %flex-centered;
+  
+    margin-bottom: 50px;
+  }
+  
+  .buttons-list__item:not(:last-child) {
+    margin-right: 8px;
+  }
