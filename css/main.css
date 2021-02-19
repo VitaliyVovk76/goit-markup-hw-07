@@ -888,16 +888,16 @@ body {
   height: 100%;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform;
-  transition: transform, 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform, 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-list__link:hover .card-work__overlay,
 .card-list__link:focus .card-work__overlay {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-work__overlay-text {
