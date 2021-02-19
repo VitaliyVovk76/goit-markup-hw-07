@@ -1,0 +1,48 @@
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    background-color: $backgroundFooterColor;
+  }
+  
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .footer__logo {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  .footer__contacts {
+    margin-right: 70px;
+  }
+
+  .footer-join {
+    margin-right: auto;
+  }
+  
+  .footer-join__appeal {
+    display: block;
+    margin-bottom: 20px;
+  
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.19;
+    color: $primaryWhiteColor;
+    text-transform: uppercase;
+  }
+
+  .footer-social-networks__btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $primaryWhiteColor;
+  
+    &:hover,
+    &:focus {
+      background-color: $accentColor;
+    }
+  }

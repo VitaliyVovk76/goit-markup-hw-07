@@ -13,14 +13,15 @@
 @import "./components/social-networks";
 @import "./components/clients";
 @import "./components/footer";
+@import "./components/footer-contacts";
+@import "./components/footer-address";
+@import "./components/form-footer";
 
 
 
 
 
-.address {
-  font-style: normal;
-}
+
 
 
 .buttons-list {
@@ -127,134 +128,9 @@
 }
 /* PORTFOLIO END*/
 
-/* FOOTER */
-.footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  background-color: $backgroundFooterColor;
-}
-
-.footer__container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer__contacts {
-  margin-right: 70px;
-}
-
-.footer .logo {
-  display: block;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.address__list {
-  @extend %list;
-}
-
-.address__text {
-  font-weight: 400;
-  line-height: 1.7;
-  margin-bottom: 9px;
-
-  color: $primaryWhiteColor;
-}
-
-.address__tel {
-  @extend %link;
-  font-weight: 400;
-  line-height: 1.7;
-
-  color: $linkFooterColor;
-}
-
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-join {
-  margin-right: auto;
-}
-
-.footer-join__appeal {
-  margin-bottom: 20px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.19;
-  color: $primaryWhiteColor;
-  text-transform: uppercase;
-}
-
-.footer .social-networks__btn {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: $primaryWhiteColor;
-
-  &:hover,
-  &:focus {
-    background-color: $accentColor;
-  }
-}
-
-.footer .social-networks__img {
-  fill: currentColor;
-}
-
-/* FOOTER END*/
-
 /* FOOTER FORM */
 
-.form-footer__appeal {
-  display: block;
-  margin-bottom: 20px;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-
-  color: $primaryWhiteColor;
-}
-
-.form-footer__wrapper {
-  @extend %flex-centered;
-}
-
-.form-footer__field {
-  display: block;
-  margin-right: 12px;
-}
-
-.form-footer__input::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-footer__input {
-  display: block;
-  width: 358px;
-  height: 50px;
-  padding: 15px 16px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: $primaryBorderRadius;
-
-  background-color: $backgroundFooterColor;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-form-button-img {
-  margin-left: 10px;
-}
 
 /*HERO MODAL WINDOW */
 .hero-backdrop {

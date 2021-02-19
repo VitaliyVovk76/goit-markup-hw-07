@@ -1,0 +1,28 @@
+
+.address {
+    font-style: normal;
+  }
+  
+  .address__list {
+    @extend %list;
+  }
+  
+  .address__text {
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 9px;
+  
+    color: $primaryWhiteColor;
+  }
+  
+  .address__tel {
+    @extend %link;
+    font-weight: 400;
+    line-height: 1.7;
+  
+    color: $linkFooterColor;
+  }
+  
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
