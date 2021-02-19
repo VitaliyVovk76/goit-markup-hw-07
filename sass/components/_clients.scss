@@ -1,0 +1,32 @@
+
+.clients__list {
+    @extend %list;
+    display: flex;
+  }
+  
+  .clients__btn {
+    @extend %flex-centered;
+  
+    border: 1px solid $socLinkPrimaryColor;
+    border-radius: $primaryBorderRadius;
+    width: 170px;
+    height: 90px;
+    color: $socLinkPrimaryColor;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &:hover,
+    &:focus {
+      border: 1px solid $accentColor;
+      color: $accentColor;
+    }
+  }
+  
+  .clients__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  
+  .clients__img {
+    fill: currentColor;
+  }
