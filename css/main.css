@@ -14,15 +14,35 @@
   color: #2196f3;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  color: #757575;
-  background-color: #ffffff;
-  letter-spacing: 0.03em;
-  font-size: 14px;
+.button-primary, .button-secondary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-/*сброс стилей от браузера*/
+.header__container, .site-nav, .contact-nav__link, .feature__blank, .social-networks__btn, .clients__btn, .buttons-list, .form-footer__wrapper, .form__btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 h1,
 h2,
 h3,
@@ -47,6 +67,7 @@ textarea {
   resize: none;
 }
 
+/*сброс стилей от браузера*/
 /* END */
 /* классы-утилиты */
 .address {
@@ -89,60 +110,17 @@ textarea {
 }
 
 /* BUTTON */
-/* .button {
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .button.primary {
-    display: inline-flex;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 32px;
-    padding-right: 32px;
-    border: 1px solid var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-weight: 700;
-    line-height: 1.87;
-    text-align: center;
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    letter-spacing: 0.06em;
-  } */
-.button {
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 .button-primary {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 10px 32px;
   border-radius: 4px;
   border: 1px solid #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
-  font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
-  cursor: pointer;
 }
 
 .button-primary__form {
@@ -151,23 +129,11 @@ textarea {
 }
 
 .button-secondary {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-radius: 4px;
   padding: 6px 22px;
   border: 1px solid #f5f4fa;
-  font-family: inherit;
-  font-size: 16px;
   font-weight: 500;
   line-height: 1.62;
-  text-align: center;
   color: #212121;
   background-color: #f5f4fa;
   cursor: pointer;
@@ -188,22 +154,7 @@ textarea {
   position: relative;
 }
 
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: centr;
-      -ms-flex-align: centr;
-          align-items: centr;
   margin-right: auto;
 }
 
@@ -265,15 +216,6 @@ textarea {
 }
 
 .contact-nav__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -354,15 +296,6 @@ textarea {
 }
 
 .feature__blank {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 30px;
   width: 100%;
   height: 120px;
@@ -489,15 +422,6 @@ textarea {
 }
 
 .social-networks__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -524,15 +448,6 @@ textarea {
 }
 
 .clients__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 170px;
@@ -558,12 +473,6 @@ textarea {
 /* KLIENTS END*/
 /* PORTFOLIO */
 .buttons-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 50px;
 }
 
@@ -748,18 +657,6 @@ textarea {
   color: #ffffff;
 }
 
-.form-footer__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .form-footer__field {
   display: block;
   margin-right: 12px;
@@ -904,6 +801,22 @@ textarea {
   margin-bottom: 10px;
 }
 
+.form-field textarea::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .form__label {
   display: block;
   margin-bottom: 4px;
@@ -1037,43 +950,8 @@ textarea {
           box-shadow: none;
 }
 
-.button {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
-.form__btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.form .button {
-  padding: 10px 55px;
-}
-
 .form-checkbox__link {
   color: #2196f3;
-}
-
-.hero-field textarea::-webkit-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.hero-field textarea:-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.hero-field textarea::-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.hero-field textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
 }
 
 /* END */

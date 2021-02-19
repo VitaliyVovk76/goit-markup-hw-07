@@ -1,42 +1,15 @@
 @import "./utils/variables";
 @import "./utils/placeholders";
+@import "./utils/reset-styles";
+@import "./components/common.scss";
 
-body {
-  font-family: "Roboto", sans-serif;
-  color: $textPrimaryColor;
-  background-color: $primaryWhiteColor;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-}
+
 
 /*сброс стилей от браузера*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-}
-
-textarea {
-  resize: none;
-}
 /* END */
 
 /* классы-утилиты */
-
 
 .address {
   font-style: normal;
@@ -79,56 +52,20 @@ textarea {
 }
 
 /* BUTTON */
-/* .button {
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .button.primary {
-    display: inline-flex;
-    align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 32px;
-    padding-right: 32px;
-    border: 1px solid var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    font-weight: 700;
-    line-height: 1.87;
-    text-align: center;
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    letter-spacing: 0.06em;
-  } */
-.button {
-  border: 1px solid transparent;
-  border-radius: $primaryBorderRadius;
-
-  font-family: inherit;
-  font-size: 16px;
-  cursor: pointer;
-}
 .button-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %button;
+  
   padding: 10px 32px;
   border-radius: $primaryBorderRadius;
   border: 1px solid $accentColor;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  font-family: inherit;
-  font-size: 16px;
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
 
   color: $primaryWhiteColor;
   background-color: $accentColor;
-
-  cursor: pointer;
 }
 
 .button-primary__form {
@@ -137,18 +74,15 @@ textarea {
 }
 
 .button-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @extend %button;
+
   border-radius: $primaryBorderRadius;
   padding: 6px 22px;
 
   border: 1px solid $backgroundSecondaryColor;
-  font-family: inherit;
-  font-size: 16px;
+
   font-weight: 500;
   line-height: 1.62;
-  text-align: center;
   color: $titleColor;
   background-color: $backgroundSecondaryColor;
   cursor: pointer;
@@ -172,19 +106,17 @@ textarea {
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
+  @extend %flex-centered;
 }
 
-
 .site-nav {
-  display: flex;
-  align-items: centr;
+  @extend %flex-centered;
   margin-right: auto;
 }
 
 .site-nav__list {
   @extend %list;
+
   display: flex;
   align-items: center;
 }
@@ -200,6 +132,7 @@ textarea {
 
 .site-nav__link {
   @extend %link;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -213,19 +146,19 @@ textarea {
 
 .site-nav__link--current {
   color: $accentColor;
-}
 
-.site-nav__link--current::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: $accentColor;
-  margin-top: 10px;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accentColor;
+    margin-top: 10px;
+  }
 }
 
 .contact-nav {
@@ -239,9 +172,8 @@ textarea {
 
 .contact-nav__link {
   @extend %link;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centered;
+
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -323,6 +255,7 @@ textarea {
 
 .feature__list {
   @extend %list;
+
   display: flex;
 }
 
@@ -331,9 +264,8 @@ textarea {
 }
 
 .feature__blank {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centered;
+
   margin-bottom: 30px;
   width: 100%;
   height: 120px;
@@ -454,6 +386,7 @@ textarea {
 
 .social-networks {
   @extend %list;
+
   display: flex;
 }
 
@@ -462,9 +395,8 @@ textarea {
 }
 
 .social-networks__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centered;
+
   width: 44px;
   height: 44px;
   border-radius: $fullRoundBorderRadius;
@@ -493,9 +425,8 @@ textarea {
 }
 
 .clients__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centered;
+
   border: 1px solid $socLinkPrimaryColor;
   border-radius: $primaryBorderRadius;
   width: 170px;
@@ -526,8 +457,8 @@ textarea {
 
 .buttons-list {
   @extend %list;
-  display: flex;
-  justify-content: center;
+  @extend %flex-centered;
+
   margin-bottom: 50px;
 }
 
@@ -652,7 +583,7 @@ textarea {
   margin-bottom: 20px;
 }
 
-.address__list{
+.address__list {
   @extend %list;
 }
 
@@ -676,7 +607,6 @@ textarea {
   margin-bottom: 9px;
 }
 
-
 .footer-join {
   margin-right: auto;
 }
@@ -696,7 +626,7 @@ textarea {
   color: $primaryWhiteColor;
 
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $accentColor;
   }
 }
@@ -722,9 +652,7 @@ textarea {
 }
 
 .form-footer__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-centered;
 }
 
 .form-footer__field {
@@ -805,11 +733,11 @@ textarea {
   position: absolute;
   top: 8px;
   right: 8px;
-
+// //////////////////////////
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
+// /////////////////////
   width: 30px;
   height: 30px;
   border-radius: $fullRoundBorderRadius;
@@ -843,6 +771,10 @@ textarea {
 .form-field {
   display: block;
   margin-bottom: 10px;
+
+  & textarea::placeholder{
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .form__label {
@@ -866,11 +798,10 @@ textarea {
   outline: none;
 
   &:hover,
-  &:focus{
+  &:focus {
     border-color: $accentColor;
   }
 }
-
 
 .form__input-area {
   position: relative;
@@ -933,23 +864,23 @@ textarea {
   line-height: 1.71;
   display: flex;
   align-items: center;
-}
 
-.form-checkbox__label::before {
-  content: "";
-  display: inline-flex;
-  margin-left: 12px;
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-  background-image: url("../images/svg-otpimize/checkbox.svg");
+  &::before{
+    content: "";
+    display: inline-flex;
+    margin-left: 12px;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    background-image: url("../images/svg-otpimize/checkbox.svg");
+  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-checkbox__label:hover::before {
-  box-shadow: 0 0 0 1px $accentColor;
+  &:hover::before{
+    box-shadow: 0 0 0 1px $accentColor;
+  }
 }
 
 .form-checkbox__input:focus + .form-checkbox__label::before {
@@ -965,26 +896,12 @@ textarea {
   box-shadow: none;
 }
 
-.button {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-}
-
 .form__btn-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.form .button {
-  padding: 10px 55px;
+  @extend %flex-centered;
 }
 
 .form-checkbox__link {
   color: $accentColor;
 }
 
-.hero-field textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
 /* END */

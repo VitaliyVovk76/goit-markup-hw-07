@@ -13,3 +13,21 @@
         color: $accentColor;
     }
 }
+
+%button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: $primaryBorderRadius;
+
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+%flex-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
